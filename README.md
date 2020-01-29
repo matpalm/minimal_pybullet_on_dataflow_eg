@@ -22,6 +22,13 @@ TODO:
 run with default localrunner
 
 ```
+
+cat seeds.txt
+1
+2
+3
+4
+
 python3 gen_data_main.py \
   --input ./seeds.txt \
   --output-render-png /tmp \
@@ -32,6 +39,7 @@ output is information on the renders; including paths to the renders
 
 ```
 cat render_info-00000-of-00001
+
 {'seed': 1, 'urdf_id': 2, 'render_fname': '/tmp/seed_000001.png'}
 {'seed': 2, 'urdf_id': 0, 'render_fname': '/tmp/seed_000002.png'}
 {'seed': 3, 'urdf_id': 3, 'render_fname': '/tmp/seed_000003.png'}
@@ -49,9 +57,7 @@ eog /tmp/seed_000003.png
 ```
 export PROJECT=YOUR_PRJ
 export BUCKET=YOUR_BUCKET
-
 gsutil cp seeds.txt gs://$BUCKET/gen_data/
-
 python3 gen_data_main.py \
   --job_name gen-data-$USER \
   --project $PROJECT \
@@ -68,6 +74,7 @@ output is potentially sharded
 
 ```
 gsutil cat gs://$BUCKET/gen_data/render_info*
+
 {'seed': 3, 'urdf_id': 3, 'render_fname': 'gs://YOUR_BUCKET/gen_data/renders/seed_000003.png'}
 {'seed': 2, 'urdf_id': 0, 'render_fname': 'gs://YOUR_BUCKET/gen_data/renders/seed_000002.png'}
 {'seed': 1, 'urdf_id': 2, 'render_fname': 'gs://YOUR_BUCKET/gen_data/renders/seed_000001.png'}
