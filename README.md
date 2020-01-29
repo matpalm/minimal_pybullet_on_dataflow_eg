@@ -1,4 +1,4 @@
-# minimal example of running pybullet data generation script on dataflow
+# minimal example of running pybullet under google cloud dataflow
 
 super minimal project setup for running [pybullet](https://pybullet.org/)
 renders under [google cloud dataflow](https://cloud.google.com/dataflow/)
