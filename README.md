@@ -1,15 +1,12 @@
 # minimal example of running pybullet data generation script on dataflow
 
-though [dataflow](https://cloud.google.com/dataflow/) might seems like it's
-maybe a weird tool to do batch image generation i've actually always found
-mapreduce style environments a good place to do batch jobs; if nothing else
-because it has sensible behaviour in terms of stragglers, autoscaling,
-retry failure etc.
+super minimal project setup for running [pybullet](https://pybullet.org/)
+renders under [google cloud dataflow](https://cloud.google.com/dataflow/)
 
 this example includes ...
 
-* minimal python scaffolding for a non standard dataflow dependency (pybullet)
-* manifest input (one line -> one unit of work)
+* minimal python scaffolding for a non standard dataflow dependency
+* manifested input (one line -> one unit of work)
 * saving renders to cloud storage (job side effect)
 
 TODO:
