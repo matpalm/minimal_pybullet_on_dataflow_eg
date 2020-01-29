@@ -8,8 +8,8 @@ python3 gen_data_main.py \
 
 run on dataflow
 
-export PROJECT=dataflow-hacking
-export BUCKET=dataflow-hacking-test
+export PROJECT=YOUR_PROJECT
+export BUCKET=YOUR_BUCKET
 gsutil cp seeds.txt gs://$BUCKET/gen_data/
 python3 gen_data_main.py \
   --job_name gen-data-$USER \
