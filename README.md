@@ -12,7 +12,20 @@ this example includes ...
 TODO:
 
 * tuning for this style of manifested job
-* pull eg of Counters in DoFn across
+* pull an example of Counters in DoFn across from another project
+
+## dependencies
+
+see `requirements.txt` for python deps to run the local version
+
+to run the version on data flow you need to ...
+
+1. sign up for [the google cloud platform](https://console.cloud.google.com/)
+1. create a [project](https://console.cloud.google.com/projectcreate) (this will be PROJECT env var below)
+1. go to [API console page](https://console.cloud.google.com/apis/dashboard), search for the dataflow API and enable it
+1. go to cloud storage and create a bucket (this will be the BUCKET env var below)
+
+(this is untested though and i'm likely missing something here...)
 
 ## running locally
 
