@@ -1,6 +1,6 @@
 # minimal example of running pybullet data generation script on dataflow
 
-though [dataflow]https://cloud.google.com/dataflow/ might seems like it's
+though [dataflow](https://cloud.google.com/dataflow/) might seems like it's
 maybe a weird tool to do batch image generation i've actually always found
 mapreduce style environments a good place to do batch jobs; if nothing else
 because it has sensible behaviour in terms of stragglers, autoscaling,
@@ -10,12 +10,12 @@ this example includes ...
 
 * minimal python scaffolding for a non standard dataflow dependency (pybullet)
 * manifest input (one line -> one unit of work)
-* counters
 * saving renders to cloud storage (job side effect)
 
 TODO:
 
 * tuning for this style of manifested job
+* pull eg of Counters in DoFn across
 
 ## running locally
 
@@ -37,6 +37,12 @@ cat render_info-00000-of-00001
 {'seed': 3, 'urdf_id': 3, 'render_fname': '/tmp/seed_000003.png'}
 {'seed': 4, 'urdf_id': 3, 'render_fname': '/tmp/seed_000004.png'}
 ```
+
+```
+eog /tmp/seed_000003.png
+```
+
+<img src="seed_000003.png"/>
 
 ## run on dataflow
 
