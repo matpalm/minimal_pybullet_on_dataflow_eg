@@ -2,4 +2,4 @@ apache-beam==2.12.0
 google-cloud-storage==1.25.0
 pybullet==2.5.0
 numpy==1.16.2
-Pillow==6.2.0
+Pillow==8.1.1
